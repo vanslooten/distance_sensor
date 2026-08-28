@@ -64,10 +64,7 @@ while True:
         oled.fill(0)
         
         # something nearby?
-        if distance_cm < 20:
             # sound alarm
-            beep()
-            oled.text("WARNING!", 0, 50)
 
         # display the distance
         oled.text("Distance:", 0, 10)
