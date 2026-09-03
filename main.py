@@ -60,5 +60,19 @@ while True:
     except OSError as e:
         print('Error:', e)
     
+    # catch an KeyboardInterrupt:
+    except KeyboardInterrupt:
+        print("Keyboard Interrupt received")
+        break # exit the loop
+
     # Wait 1 second before the next measurement
-    time.sleep(1)
+    try:
+        time.sleep(1)
+    # catch an KeyboardInterrupt:
+    except KeyboardInterrupt:
+        print("Keyboard Interrupt received")
+        break # exit the loop
+
+# after finished, clear the screen
+oled.fill(0)
+oled.show()
